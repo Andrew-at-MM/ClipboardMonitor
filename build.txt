@@ -1,0 +1,37 @@
+1. .NET SDK (Required):
+- Download and install from: https://dotnet.microsoft.com/download
+- This gives you the C# compiler and runtime
+
+2. VS Code Extensions (Required):
+- "C# Dev Kit" extension by Microsoft
+
+
+To verify your installation:
+1. Open a terminal and run:
+```bash
+dotnet --version
+```
+
+To create a new Windows Forms project (for system tray app):
+```bash
+dotnet new winforms -n ClipboardMonitor
+cd ClipboardMonitor
+code .
+```
+
+To compile and run this program:
+
+1. Create a new Windows Forms project:
+```bash
+dotnet new winforms -n ClipboardMonitor
+cd ClipboardMonitor
+```
+
+2. Replace the contents of `Program.cs` with the code above
+
+3. Build and run:
+```bash
+dotnet build
+dotnet run
+```
+dotnet publish -c Release
