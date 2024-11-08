@@ -49,12 +49,12 @@ namespace ClipboardMonitor
             InitializeClipboardMonitoring();
             SetupSystemEventHandlers();
             
-            // Setup reconnect timer (checks every 30 seconds)
+            // Setup reconnect timer (checks every 5 minutes)
             reconnectTimer = new System.Threading.Timer(
                 _ => ReconnectClipboardChain(),
                 null,
-                TimeSpan.FromSeconds(30),
-                TimeSpan.FromSeconds(30)
+                TimeSpan.TimeSpan.FromMinutes(5),
+                TimeSpan.TimeSpan.FromMinutes(5) 
             );
         }
 
@@ -167,14 +167,19 @@ namespace ClipboardMonitor
 
             try
             {
-                // Remove from current chain
-                if (nextClipboardViewer != IntPtr.Zero)
+                // Only reconnect if the chain is invalid
+                if (!IsClipboardChainValid())
                 {
-                    ChangeClipboardChain(this.Handle, nextClipboardViewer);
-                }
+                    // Remove from current chain
+                    if (nextClipboardViewer != IntPtr.Zero)
+                    {
+                        ChangeClipboardChain(this.Handle, nextClipboardViewer);
+                    }
 
-                // Rejoin the chain
-                nextClipboardViewer = SetClipboardViewer(this.Handle);
+                    // Rejoin the chain
+                    nextClipboardViewer = SetClipboardViewer(this.Handle);
+                    LogError("Clipboard chain was broken and has been restored");
+                }
             }
             catch (Exception ex)
             {
