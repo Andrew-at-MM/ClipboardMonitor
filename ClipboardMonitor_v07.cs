@@ -20,17 +20,14 @@ namespace ClipboardMonitor
         private System.Threading.Timer? reconnectTimer;
         private System.Threading.Timer? hideNotificationTimer;
 
-        // Windows API imports - Added UnmanagedCallersOnly for AOT
+        // Windows API imports
         [DllImport("user32.dll", SetLastError = true)]
-        [UnmanagedCallersOnly]
         private static extern IntPtr SetClipboardViewer(IntPtr hWndNewViewer);
 
         [DllImport("user32.dll", SetLastError = true)]
-        [UnmanagedCallersOnly]
         private static extern bool ChangeClipboardChain(IntPtr hWndRemove, IntPtr hWndNewNext);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
-        [UnmanagedCallersOnly]
         private static extern int SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
 
         private const int WM_DRAWCLIPBOARD = 0x0308;
@@ -53,8 +50,8 @@ namespace ClipboardMonitor
             reconnectTimer = new System.Threading.Timer(
                 _ => ReconnectClipboardChain(),
                 null,
-                TimeSpan.TimeSpan.FromMinutes(5),
-                TimeSpan.TimeSpan.FromMinutes(5) 
+                TimeSpan.FromMinutes(5),
+                TimeSpan.FromMinutes(5)
             );
         }
 
@@ -63,8 +60,8 @@ namespace ClipboardMonitor
             trayIcon = new NotifyIcon();
             
             // Get the icon from the current executable
-            Icon appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-            trayIcon.Icon = appIcon;
+            Icon? appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+            trayIcon.Icon = appIcon ?? SystemIcons.Application;
 
             var contextMenu = new ContextMenuStrip();
             
@@ -154,6 +151,24 @@ namespace ClipboardMonitor
                     Thread.Sleep(1000); // Give system time to stabilize
                     ReconnectClipboardChain();
                     break;
+            }
+        }
+
+        private bool IsClipboardChainValid()
+        {
+            try
+            {
+                // Try to access the clipboard - this will throw an exception if the chain is broken
+                if (Clipboard.ContainsText())
+                {
+                    _ = Clipboard.GetText();
+                    return true;
+                }
+                return true; // Return true if we can't check text but no exception occurred
+            }
+            catch
+            {
+                return false;
             }
         }
 
