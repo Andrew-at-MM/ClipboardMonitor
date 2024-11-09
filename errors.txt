@@ -1,0 +1,109 @@
+C:\Code\ClipboardMonitor\Program.cs(66,28): warning CS8600: Converting null literal or possible null value to non-nullabl 
+e type. [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(56,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod 
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(57,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod 
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(123,39): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(171,22): error CS0103: The name 'IsClipboardChainValid' does not exist in the current 
+ context [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(176,25): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(180,43): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(199,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(210,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(313,17): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+    1 Warning(s)
+    9 Error(s)
+
+Time Elapsed 00:00:01.60
+PS C:\Code\ClipboardMonitor> 
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor>
+PS C:\Code\ClipboardMonitor> dotnet build
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+C:\Code\ClipboardMonitor\Program.cs(56,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(57,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(66,28): warning CS8600: Converting null literal or possible null value to non-nullabl 
+e type. [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(123,39): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(171,22): error CS0103: The name 'IsClipboardChainValid' does not exist in the current 
+ context [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(176,25): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(180,43): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(199,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(210,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(313,17): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+
+Build FAILED.
+
+C:\Code\ClipboardMonitor\Program.cs(66,28): warning CS8600: Converting null literal or possible null value to non-nullabl 
+e type. [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(56,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod 
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(57,26): error CS0117: 'TimeSpan' does not contain a definition for 'TimeSpan' [C:\Cod 
+e\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(123,39): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(171,22): error CS0103: The name 'IsClipboardChainValid' does not exist in the current 
+ context [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(176,25): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(180,43): error CS8901: 'ClipboardMonitorForm.SetClipboardViewer(nint)' is attributed  
+with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\ClipboardMo 
+nitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(199,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(210,25): error CS8901: 'ClipboardMonitorForm.SendMessage(nint, int, nint, nint)' is a 
+ttributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\C 
+lipboardMonitor\ClipboardMonitor.csproj]
+C:\Code\ClipboardMonitor\Program.cs(313,17): error CS8901: 'ClipboardMonitorForm.ChangeClipboardChain(nint, nint)' is att 
+ributed with 'UnmanagedCallersOnly' and cannot be called directly. Obtain a function pointer to this method. [C:\Code\Cli 
+pboardMonitor\ClipboardMonitor.csproj]
+    1 Warning(s)
+    9 Error(s)
+
+<_SuppressWinFormsTrimError>true</_SuppressWinFormsTrimError>
+
+net-illink/windows-forms for more details. [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+
+Build FAILED.
+
+C:\Program Files\dotnet\sdk\8.0.403\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.RuntimeIdentifierInference.targets(255,5 
+): error NETSDK1175: Windows Forms is not supported or recommended with trimming enabled. Please go to https://aka.ms/dot 
+net-illink/windows-forms for more details. [C:\Code\ClipboardMonitor\ClipboardMonitor.csproj]
+    0 Warning(s)
+    1 Error(s)
