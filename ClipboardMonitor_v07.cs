@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Microsoft.Win32;
 using System.Runtime.Versioning;
 using System.Diagnostics.CodeAnalysis;
+using System.Security;
 
 [assembly: SupportedOSPlatform("windows")]
 
