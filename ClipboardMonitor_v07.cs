@@ -22,12 +22,15 @@ namespace ClipboardMonitor
 
         // Windows API imports
         [DllImport("user32.dll", SetLastError = true)]
+        [SuppressUnmanagedCodeSecurity]
         private static extern IntPtr SetClipboardViewer(IntPtr hWndNewViewer);
 
         [DllImport("user32.dll", SetLastError = true)]
+        [SuppressUnmanagedCodeSecurity]
         private static extern bool ChangeClipboardChain(IntPtr hWndRemove, IntPtr hWndNewNext);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        [SuppressUnmanagedCodeSecurity]
         private static extern int SendMessage(IntPtr hwnd, int wMsg, IntPtr wParam, IntPtr lParam);
 
         private const int WM_DRAWCLIPBOARD = 0x0308;
@@ -47,11 +50,12 @@ namespace ClipboardMonitor
             SetupSystemEventHandlers();
             
             // Setup reconnect timer (checks every 5 minutes)
+            var fiveMinutes = TimeSpan.FromMinutes(5);
             reconnectTimer = new System.Threading.Timer(
                 _ => ReconnectClipboardChain(),
                 null,
-                TimeSpan.FromMinutes(5),
-                TimeSpan.FromMinutes(5)
+                fiveMinutes,
+                fiveMinutes
             );
         }
 
@@ -61,7 +65,14 @@ namespace ClipboardMonitor
             
             // Get the icon from the current executable
             Icon? appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-            trayIcon.Icon = appIcon ?? SystemIcons.Application;
+            if (appIcon != null)
+            {
+                trayIcon.Icon = appIcon;
+            }
+            else
+            {
+                trayIcon.Icon = SystemIcons.Application;
+            }
 
             var contextMenu = new ContextMenuStrip();
             
